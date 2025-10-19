@@ -1,3 +1,5 @@
+import { isCanJustReturn } from "./Primitive";
+
 //
 export type WeakKey = object | Function;
 export type keyType = string | number | symbol;
@@ -181,3 +183,30 @@ export const isArrayInvalidKey = (key: keyType | null | undefined | any, src?: a
 //
 export const inProxy = new WeakMap();
 export const contextify = (pc: any, name: any) => { return (typeof pc?.[name] == "function" ? pc?.[name]?.bind?.(pc) : pc?.[name]); }
+
+//
+export const deepOperateAndClone = (obj: any, operation: (el: any, key: number|string, obj: any)=>any, $prev?: [any, number|string]|null)=>{
+    if (Array.isArray(obj)) {
+        if (obj.every(isCanJustReturn)) return obj.map(operation);
+        return obj.map((value, index) => deepOperateAndClone(value, operation, [obj, index] as [any, number|string]));
+    }
+    if (obj instanceof Map) {
+        const entries = Array.from(obj.entries());
+        const values = entries.map(([key, value]) => value);
+        if (values.every(isCanJustReturn)) return new Map(entries.map(([key, value]) => [key, operation(value, key, obj)]));
+        return new Map(entries.map(([key, value]) => [key, deepOperateAndClone(value, operation, [obj, key] as [any, number|string])]));
+    }
+    if (obj instanceof Set) {
+        const entries = Array.from(obj.entries());
+        const values = entries.map(([key, value]) => value);
+        if (entries.every(isCanJustReturn)) return new Set(values.map(operation));
+        return new Set(values.map(value => deepOperateAndClone(value, operation, [obj, value] as [any, number|string])));
+    }
+    if (typeof obj == "object" && (obj?.constructor == Object && Object.prototype.toString.call(obj) == "[object Object]")) {
+        const entries = Array.from(Object.entries(obj));
+        const values = entries.map(([key, value]) => value);
+        if (values.every(isCanJustReturn)) return Object.fromEntries(entries.map(([key, value]) => [key, operation(value, key, obj)]));
+        return Object.fromEntries(entries.map(([key, value]) => [key, deepOperateAndClone(value, operation, [obj, key] as [any, number|string])]));
+    }
+    return operation(obj, $prev?.[1] ?? "", $prev?.[0] ?? null);
+}

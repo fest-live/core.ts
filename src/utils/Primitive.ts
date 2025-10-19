@@ -26,7 +26,7 @@ export const tryParseByHint = (value: any, hint?: any)=>{
 
 //
 export const hasProperty = (v: any, prop: string = "value") => {
-    return (typeof v == "object" && (v?.[prop] != null || (v != null && (prop in v))));
+    return ((typeof v == "object" || typeof v == "function") && v != null && (v?.[prop] != null || (prop in v)));
 }
 
 //
@@ -45,7 +45,7 @@ export const unwrap = (obj, fallback?: null|undefined|((...args: any[])=>any))=>
 
 //
 export const deref = (obj: any) => {
-    if (obj != null && (typeof obj == "object" || typeof obj == "function") && (obj instanceof WeakRef || typeof obj?.deref == "function") && obj?.deref?.() != null) {
+    if (obj != null && (typeof obj == "object" || typeof obj == "function") && (obj instanceof WeakRef || typeof obj?.deref == "function")) {
         return deref(obj?.deref?.());
     };
     return obj;
@@ -212,3 +212,38 @@ export const makeTriggerLess = function(self){
         return result;
     }
 }
+
+//
+export const unwrapArray = (arr: any[])=>{
+    if (Array.isArray(arr)) {
+        return arr?.flatMap?.((el)=>{
+            if (Array.isArray(el)) return unwrapArray(el);
+            return el;
+        })
+    } else {
+        return arr;
+    }
+}
+
+/*
+//
+export const isNotComplexArray = (arr: any[])=>{
+    return unwrapArray(arr).every(isPrimitive);
+}*/
+
+//
+export const isNotComplexArray = (arr: any[])=>{
+    return unwrapArray(arr)?.every?.(isCanJustReturn);
+}
+
+
+// TODO: review cases when arrays isn't primitive
+export const isCanJustReturn = (obj: any)=>{
+    return isPrimitive(obj) || (typeof SharedArrayBuffer == "function" && obj instanceof SharedArrayBuffer) || isTypedArray(obj) || (Array.isArray(obj) && isNotComplexArray(obj));
+}
+
+//
+export const isTypedArray = (value: any)=>{
+    return ArrayBuffer.isView(value) && !(value instanceof DataView);
+}
+
