@@ -1,4 +1,4 @@
-import { isCanJustReturn } from "./Primitive";
+import { isArrayOrIterable, isCanJustReturn } from "./Primitive";
 
 //
 export type WeakKey = object | Function;
@@ -209,4 +209,15 @@ export const deepOperateAndClone = (obj: any, operation: (el: any, key: number|s
         return Object.fromEntries(entries.map(([key, value]) => [key, deepOperateAndClone(value, operation, [obj, key] as [any, number|string])]));
     }
     return operation(obj, $prev?.[1] ?? "", $prev?.[0] ?? null);
+}
+
+//
+export const bindEvent = (on: any, key: string, value: any)=>{
+    if (on?.[key] != null) {
+        const exists = on[key];
+        if (Array.isArray(value)) { exists.add(...value); } else if (typeof value == "function") { exists.add(value); }
+        return on;
+    }
+    on[key] ??= Array.isArray(value) ? new Set(value) : (typeof value == "function" ? new Set([value]) : value);
+    return on;
 }
