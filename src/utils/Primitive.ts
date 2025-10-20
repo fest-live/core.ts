@@ -247,3 +247,8 @@ export const isTypedArray = (value: any)=>{
     return ArrayBuffer.isView(value) && !(value instanceof DataView);
 }
 
+//
+export const isSymbol = (sym: unknown) => (typeof sym === 'symbol' || typeof sym == 'object' && Object.prototype.toString.call(sym) == '[object Symbol]');
+export const isPromise = <T extends object | Function | unknown>(target: T | Promise<T>): boolean => {
+    return target instanceof Promise || typeof (target as any)?.then == "function";
+}
