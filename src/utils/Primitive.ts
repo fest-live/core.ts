@@ -252,3 +252,21 @@ export const isSymbol = (sym: unknown) => (typeof sym === 'symbol' || typeof sym
 export const isPromise = <T extends object | Function | unknown>(target: T | Promise<T>): boolean => {
     return target instanceof Promise || typeof (target as any)?.then == "function";
 }
+
+//
+export const isCanTransfer = (obj: any)=>{
+    return isPrimitive(obj) ||
+        (typeof ArrayBuffer == "function" && obj instanceof ArrayBuffer) ||
+        (typeof MessagePort == "function" && obj instanceof MessagePort) ||
+        (typeof ReadableStream == "function" && obj instanceof ReadableStream) ||
+        (typeof WritableStream == "function" && obj instanceof WritableStream) ||
+        (typeof TransformStream == "function" && obj instanceof TransformStream) ||
+        (typeof ImageBitmap == "function" && obj instanceof ImageBitmap) ||
+        (typeof VideoFrame == "function" && obj instanceof VideoFrame) ||
+        (typeof OffscreenCanvas == "function" && obj instanceof OffscreenCanvas) ||
+        (typeof RTCDataChannel == "function" && obj instanceof RTCDataChannel) || // @ts-ignore
+        (typeof AudioData == "function" && obj instanceof AudioData) || // @ts-ignore
+        (typeof WebTransportReceiveStream == "function" && obj instanceof WebTransportReceiveStream) || // @ts-ignore
+        (typeof WebTransportSendStream == "function" && obj instanceof WebTransportSendStream) || // @ts-ignore
+        (typeof WebTransportReceiveStream == "function" && obj instanceof WebTransportReceiveStream); // @ts-ignore
+}
