@@ -1,5 +1,5 @@
 {
-    "name": "@fest/core-ts",
+    "name": "@fest/core",
     "description": "JS core utils",
     "version": "1.0.0alpha",
     "private": false,
