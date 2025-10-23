@@ -26,7 +26,7 @@ const objectAssign = (target, ...sources) => {
 }
 
 //
-export const NAME = "object";
+export const NAME = "core";
 export const __dirname = resolve(import.meta.dirname, "./");
 export default objectAssign(
     await importConfig(resolve(__dirname, "../../shared/vite.config.js"),
