@@ -177,7 +177,7 @@ export const associateWith = (cb, name)=>{
 //
 export const isArrayInvalidKey = (key: keyType | null | undefined | any, src?: any) => {
     const invalidForArray = key == null || (key as any) < 0 || typeof key != "number" || (key as any) == Symbol.iterator || (src != null ? key >= (src?.length || 0) : false);
-    return (src != null ? Array.isArray(src) && invalidForArray : true);
+    return (src != null ? Array.isArray(src) && invalidForArray : false);
 };
 
 //
