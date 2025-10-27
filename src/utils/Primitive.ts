@@ -26,7 +26,7 @@ export const tryParseByHint = (value: any, hint?: any)=>{
 
 //
 export const hasProperty = (v: any, prop: string = "value") => {
-    return ((typeof v == "object" || typeof v == "function") && v != null && (v?.[prop] != null || (prop in v)));
+    return ((typeof v == "object" || typeof v == "function") && v != null && ((prop in v) || v?.[prop] != null));
 }
 
 //
