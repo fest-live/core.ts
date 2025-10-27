@@ -270,3 +270,17 @@ export const isCanTransfer = (obj: any)=>{
         (typeof WebTransportSendStream == "function" && obj instanceof WebTransportSendStream) || // @ts-ignore
         (typeof WebTransportReceiveStream == "function" && obj instanceof WebTransportReceiveStream); // @ts-ignore
 }
+
+//
+export const defaultByType = (a)=>{
+    switch(typeof a) {
+        case "number": return 0;
+        case "string": return "";
+        case "boolean": return false;
+        case "object": return null;
+        case "function": return null;
+        case "symbol": return null;
+        case "bigint": return 0n;
+    }
+    return undefined;
+}
