@@ -148,7 +148,7 @@ export const isNotEqual = (a, b)=>{
     if (a == null && b == null) return false;
     if (a == null || b == null) return true;
     if (typeof a == "number" && typeof b == "number") {
-        return (Math.abs(a - b) >= 1e-9);
+        return a != b || (Math.abs(a - b) >= 1e-9);
     }
     if (typeof a == "boolean" && typeof b == "boolean") {
         return a != b;
@@ -159,7 +159,7 @@ export const isNotEqual = (a, b)=>{
     if ((typeof a) != (typeof b)) {
         return a !== b;
     }
-    return a != b;
+    return (a && b && a != b) || a !== b;
 }
 
 export const propCbMap = new WeakMap();
