@@ -154,7 +154,7 @@ export const isNotEqual = (a, b)=>{
         return a != b;
     }
     if (typeof a == "string" && typeof b == "string") {
-        return a != b;
+        return a != b && (a != "" && b != "") || a !== b;
     }
     if ((typeof a) != (typeof b)) {
         return a !== b;
