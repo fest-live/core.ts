@@ -1,4 +1,4 @@
-import { isArrayOrIterable, isCanJustReturn } from "./Primitive";
+import { isCanJustReturn } from "./Primitive";
 
 //
 export type WeakKey = object | Function;
@@ -162,17 +162,8 @@ export const isNotEqual = (a, b)=>{
     return (a && b && a != b) || a !== b;
 }
 
-export const propCbMap = new WeakMap();
-export const boundCtx  = new WeakMap();
-
 //
-export const associateWith = (cb, name)=>{
-    // !experimental `getOrInsert` feature!
-    // @ts-ignore
-    return propCbMap.getOrInsertComputed(cb, ()=>{
-        return (val, prop: keyType, old)=>{ if (prop == name) return cb?.(val, prop, old); };
-    });
-}
+export const boundCtx  = new WeakMap();
 
 //
 export const isArrayInvalidKey = (key: keyType | null | undefined | any, src?: any) => {
