@@ -98,17 +98,22 @@ export const callByProp = (unwrap, prop: keyType, cb, ctx)=>{
     ) return;
 
     //
+    const callIfNotNull = (v, ...args)=>{
+        if (v != null) { return cb?.(v, ...args); }
+    }
+
+    //
     if (unwrap instanceof Map || unwrap instanceof WeakMap) {
-        if (unwrap.has(prop as any)) { return cb?.(unwrap.get(prop as any), prop); }
+        if (unwrap.has(prop as any)) { return callIfNotNull?.(unwrap.get(prop as any), prop); }
     } else
         if (unwrap instanceof Set || unwrap instanceof WeakSet) {
-            if (unwrap.has(prop as any)) { return cb?.(prop, prop); }
+            if (unwrap.has(prop as any)) { return callIfNotNull?.(prop, prop); }
         } else
             if (Array.isArray(unwrap) && (typeof prop == "string" && [...prop?.matchAll?.(/^\d+$/g)]?.length == 1) && Number.isInteger(typeof prop == "string" ? parseInt(prop) : prop)) {
                 const index = typeof prop == "string" ? parseInt(prop) : prop;
-                return cb?.(unwrap?.[index], index, null, "@add");
+                return callIfNotNull?.(unwrap?.[index], index, null, "@add");
             } else
-                if (typeof unwrap == "function" || typeof unwrap == "object") { return cb?.(unwrap?.[prop], prop); }
+                if (typeof unwrap == "function" || typeof unwrap == "object") { return callIfNotNull?.(unwrap?.[prop], prop); }
 }
 
 //
