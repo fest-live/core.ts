@@ -7,6 +7,13 @@ const get = (items, id)=>{ if (typeof items?.get == "function") { const item = i
 
 //
 export const getSpan = (el, ax)=>{ const prop = el.style.getPropertyValue(["--ox-c-span", "--ox-r-span"][ax]), factor = ((parseFloat(prop || "1") || 1) - 1); return Math.min(Math.max(factor-1, 0), 1); }
+/**
+ * Find a non-busy cell near the preferred cell in a grid layout.
+ * If the preferred cell is busy, searches nearby cells to find an available one.
+ * @param $preCell - Preferred cell coordinates [column, row]
+ * @param gridArgs - Grid arguments containing items, layout, and size information
+ * @returns Cell coordinates [column, row] that are not busy
+ */
 export const redirectCell = ($preCell: [number, number], gridArgs: GridArgsType): [number, number] => {
     const icons: any = (gridArgs?.items || []);
     const item = gridArgs?.item || {};

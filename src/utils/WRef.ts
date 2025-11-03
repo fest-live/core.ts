@@ -88,7 +88,14 @@ export type WR<T> = {
         : T[K] | null;
 };
 
-//
+/**
+ * Create a WeakRef wrapper proxy that allows safe access to weakly referenced objects.
+ * The proxy automatically dereferences WeakRefs when accessing properties and handles
+ * function calls on weakly referenced objects.
+ * @template T - The type of the target object (must be object or Function)
+ * @param target - The target object or WeakRef to wrap
+ * @returns A proxy that safely accesses the weakly referenced object
+ */
 export function WRef<T extends object|Function>(target: T|WeakRef<T>): WR<T> {
     if (!(typeof target == "object" || typeof target == "function") || typeof target == "symbol") return target as WR<T>;
     const isWeakRef = (target instanceof WeakRef || typeof (target as any)?.deref == "function");

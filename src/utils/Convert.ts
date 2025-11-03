@@ -1,4 +1,10 @@
-//
+/**
+ * Convert position from client space to orientation space.
+ * @param pos_in_cs - Position in client space [x, y]
+ * @param size_in_cs - Size in client space [width, height]
+ * @param or_i - Orientation index (0=normal, 1=90° swapped, 2=180°, 3=270° swapped)
+ * @returns Position in orientation space [x, y]
+ */
 export const cvt_cs_to_os = (pos_in_cs: [number, number], size_in_cs: [number, number], or_i: number = 0): [number, number] => {
     const size_in_os = [...size_in_cs];
     const pos_in_swap: [number, number] = [...pos_in_cs];

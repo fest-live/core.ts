@@ -10,7 +10,11 @@ export const isObservable = (observable: any) => {
     return Array.isArray(observable) || observable instanceof Set || observable instanceof Map;
 };
 
-//
+/**
+ * Check if a value is a primitive type (null, string, number, boolean, bigint, or undefined).
+ * @param obj - The value to check
+ * @returns True if the value is a primitive type, false otherwise
+ */
 export const isPrimitive = (obj: any)=>{
     return obj == null || typeof obj == "string" || typeof obj == "number" || typeof obj == "boolean" || typeof obj == "bigint" || typeof obj == "undefined";
 }
@@ -176,7 +180,11 @@ export const isObject = (exists) => {
     return exists != null && (typeof exists == "object" || typeof exists == "function");
 }
 
-//
+/**
+ * Get the value from a value reference or return the value itself.
+ * @param val - The value or value reference to extract from
+ * @returns The extracted value
+ */
 export const getValue = (val: any) => {
     return (hasValue(val) ? val?.value : val);
 }

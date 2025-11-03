@@ -147,8 +147,21 @@ class PromiseHandler {
     }
 }
 
-//
+/**
+ * Type alias for Promise-like values (Promise or any value).
+ * @template T - The resolved value type
+ */
 export type PromiseLike<T=any> = Promise<T>|any;
+
+/**
+ * Wrap a promise or value in a Proxy that allows synchronous property access.
+ * For resolved promises, this enables accessing properties as if the promise was already resolved.
+ * @template T - The resolved value type
+ * @param promise - The promise or value to wrap
+ * @param resolve - Optional resolve callback
+ * @param reject - Optional reject callback
+ * @returns A proxy that allows synchronous-style access to promise values
+ */
 export function Promised<T=any>(promise: PromiseLike<T>, resolve?: ((...args: any[])=>void)|null, reject?: ((...args: any[])=>void)|null) {
     if (!(promise instanceof Promise || typeof promise?.then == "function")) { return promise; }
     if (resolvedMap?.has?.(promise)) { return resolvedMap?.get?.(promise); };
