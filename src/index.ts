@@ -1,3 +1,5 @@
+import "./utils/PromiseTry";
+
 export * from "./utils/Upsert";
 export * from "./utils/Primitive";
 export * from "./utils/Object";
