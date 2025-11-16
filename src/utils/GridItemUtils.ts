@@ -49,6 +49,21 @@ export const redirectCell = ($preCell: [number, number], gridArgs: GridArgsType)
 
 
 /* LAST GENERATION... */
+export const makeOrientInset = ($orientPx: [number, number], gridArgs: GridArgsType, orient: number = 0): [number, number] => {
+    const boxInPx = [...gridArgs.size];
+    const orientPx: [number, number] = [...$orientPx];
+    const layout = [...gridArgs.layout];
+    if (orient%2) { boxInPx.reverse(); };
+    return [
+        roundNearest(orientPx[0], boxInPx[0] / layout[0]),
+        roundNearest(orientPx[1], boxInPx[1] / layout[1])
+    ];
+}
+
+
+
+
+/* LAST GENERATION... */
 export const convertOrientPxToCX = ($orientPx: [number, number], gridArgs: GridArgsType, orient: number = 0): [number, number] => {
     const boxInPx = [...gridArgs.size];
     const orientPx: [number, number] = [...$orientPx];
