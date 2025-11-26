@@ -99,7 +99,9 @@ export const clampDimension = (value: number, max: number) => {
 };
 
 //
-export const roundNearest = (number: number, N = 1)=>(Math.round(number * N) / N);
+export const roundNearest = (number: number, N = 1): number => (Math.round(number * N) / N);
+export const floorNearest = (number: number, N = 1): number => (Math.floor(number * N) / N);
+export const ceilNearest = (number: number, N = 1): number => (Math.ceil(number * N) / N);
 
 //
 export const isValueUnit = (val: any) => (typeof CSSStyleValue !== "undefined" && val instanceof CSSStyleValue);
