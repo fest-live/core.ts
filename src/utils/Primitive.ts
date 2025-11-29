@@ -16,7 +16,7 @@ export const isObservable = (observable: any) => {
  * @returns True if the value is a primitive type, false otherwise
  */
 export const isPrimitive = (obj: any)=>{
-    return obj == null || typeof obj == "string" || typeof obj == "number" || typeof obj == "boolean" || typeof obj == "bigint" || typeof obj == "undefined";
+    return typeof obj == "string" || typeof obj == "number" || typeof obj == "boolean" || typeof obj == "bigint" || typeof obj == "undefined" || obj == null;
 }
 
 //
