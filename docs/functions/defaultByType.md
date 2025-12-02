@@ -7,10 +7,10 @@
 # Function: defaultByType()
 
 ```ts
-function defaultByType(a): undefined | null | false | 0 | "" | 0n;
+function defaultByType(a): false | 0 | "" | 0n | null | undefined;
 ```
 
-Defined in: [Primitive.ts:283](https://github.com/fest-live/core.ts/blob/f90251060ec37c3104c9ee2585e6f42acaa41f43/src/utils/Primitive.ts#L283)
+Defined in: [Primitive.ts:285](https://github.com/fest-live/core.ts/blob/2cddd2eb563549b1305c7b2fc88f882dfe9e484a/src/utils/Primitive.ts#L285)
 
 ## Parameters
 
@@ -20,4 +20,4 @@ Defined in: [Primitive.ts:283](https://github.com/fest-live/core.ts/blob/f902510
 
 ## Returns
 
-`undefined` \| `null` \| `false` \| `0` \| `""` \| `0n`
+`false` \| `0` \| `""` \| `0n` \| `null` \| `undefined`

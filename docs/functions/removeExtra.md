@@ -13,7 +13,7 @@ function removeExtra(
    name): any;
 ```
 
-Defined in: [Object.ts:18](https://github.com/fest-live/core.ts/blob/f90251060ec37c3104c9ee2585e6f42acaa41f43/src/utils/Object.ts#L18)
+Defined in: [Object.ts:18](https://github.com/fest-live/core.ts/blob/2cddd2eb563549b1305c7b2fc88f882dfe9e484a/src/utils/Object.ts#L18)
 
 ## Parameters
 
@@ -27,7 +27,7 @@ Defined in: [Object.ts:18](https://github.com/fest-live/core.ts/blob/f90251060ec
 
 ### name
 
-`null` | [`keyType`](../type-aliases/keyType.md)
+[`keyType`](../type-aliases/keyType.md) | `null`
 
 ## Returns
 

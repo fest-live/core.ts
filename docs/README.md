@@ -4,6 +4,11 @@
 
 # @fest-lib/core v0.0.0
 
+## Interfaces
+
+- [GridArgsType](interfaces/GridArgsType.md)
+- [GridItemType](interfaces/GridItemType.md)
+
 ## Type Aliases
 
 - [DatasetValue](type-aliases/DatasetValue.md)
@@ -33,6 +38,7 @@
 - [callByProp](functions/callByProp.md)
 - [camelToKebab](functions/camelToKebab.md)
 - [canBeInteger](functions/canBeInteger.md)
+- [ceilNearest](functions/ceilNearest.md)
 - [clamp](functions/clamp.md)
 - [clampDimension](functions/clampDimension.md)
 - [clientSpaceInOrientCX](functions/clientSpaceInOrientCX.md)
@@ -48,6 +54,7 @@
 - [fixFx](functions/fixFx.md)
 - [floorInCX](functions/floorInCX.md)
 - [floorInOrientPx](functions/floorInOrientPx.md)
+- [floorNearest](functions/floorNearest.md)
 - [getOrInsert](functions/getOrInsert.md)
 - [getOrInsertComputed](functions/getOrInsertComputed.md)
 - [getRandomValues](functions/getRandomValues.md)
@@ -79,6 +86,7 @@
 - [isValueRef](functions/isValueRef.md)
 - [isValueUnit](functions/isValueUnit.md)
 - [kebabToCamel](functions/kebabToCamel.md)
+- [makeOrientInset](functions/makeOrientInset.md)
 - [makeTriggerLess](functions/makeTriggerLess.md)
 - [mergeByKey](functions/mergeByKey.md)
 - [normalizePrimitive](functions/normalizePrimitive.md)

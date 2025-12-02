@@ -10,7 +10,7 @@
 function potentiallyAsync(promise, cb): any;
 ```
 
-Defined in: [Primitive.ts:195](https://github.com/fest-live/core.ts/blob/f90251060ec37c3104c9ee2585e6f42acaa41f43/src/utils/Primitive.ts#L195)
+Defined in: [Primitive.ts:197](https://github.com/fest-live/core.ts/blob/2cddd2eb563549b1305c7b2fc88f882dfe9e484a/src/utils/Primitive.ts#L197)
 
 ## Parameters
 

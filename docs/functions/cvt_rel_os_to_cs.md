@@ -10,7 +10,7 @@
 function cvt_rel_os_to_cs(rel_in_os, or_i): [number, number];
 ```
 
-Defined in: [Convert.ts:58](https://github.com/fest-live/core.ts/blob/f90251060ec37c3104c9ee2585e6f42acaa41f43/src/utils/Convert.ts#L58)
+Defined in: [Convert.ts:58](https://github.com/fest-live/core.ts/blob/2cddd2eb563549b1305c7b2fc88f882dfe9e484a/src/utils/Convert.ts#L58)
 
 ## Parameters
 

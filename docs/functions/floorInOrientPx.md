@@ -13,7 +13,7 @@ function floorInOrientPx(
    orient): number[];
 ```
 
-Defined in: [GridItemUtils.ts:62](https://github.com/fest-live/core.ts/blob/f90251060ec37c3104c9ee2585e6f42acaa41f43/src/utils/GridItemUtils.ts#L62)
+Defined in: [GridItemUtils.ts:77](https://github.com/fest-live/core.ts/blob/2cddd2eb563549b1305c7b2fc88f882dfe9e484a/src/utils/GridItemUtils.ts#L77)
 
 ## Parameters
 
@@ -23,7 +23,7 @@ Defined in: [GridItemUtils.ts:62](https://github.com/fest-live/core.ts/blob/f902
 
 ### gridArgs
 
-`GridArgsType`
+[`GridArgsType`](../interfaces/GridArgsType.md)
 
 ### orient
 

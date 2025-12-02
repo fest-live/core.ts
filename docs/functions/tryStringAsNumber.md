@@ -7,10 +7,10 @@
 # Function: tryStringAsNumber()
 
 ```ts
-function tryStringAsNumber(val): null | number;
+function tryStringAsNumber(val): number | null;
 ```
 
-Defined in: [Primitive.ts:128](https://github.com/fest-live/core.ts/blob/f90251060ec37c3104c9ee2585e6f42acaa41f43/src/utils/Primitive.ts#L128)
+Defined in: [Primitive.ts:130](https://github.com/fest-live/core.ts/blob/2cddd2eb563549b1305c7b2fc88f882dfe9e484a/src/utils/Primitive.ts#L130)
 
 ## Parameters
 
@@ -20,4 +20,4 @@ Defined in: [Primitive.ts:128](https://github.com/fest-live/core.ts/blob/f902510
 
 ## Returns
 
-`null` \| `number`
+`number` \| `null`
