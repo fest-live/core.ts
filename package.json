@@ -1,5 +1,5 @@
 {
-    "name": "@fest/core",
+    "name": "@fest-lib/core",
     "description": "JS core utilities",
     "version": "0.0.0",
     "private": false,

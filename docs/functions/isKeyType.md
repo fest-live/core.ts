@@ -1,8 +1,8 @@
-[**@fest/core v0.0.0**](../README.md)
+[**@fest-lib/core v0.0.0**](../README.md)
 
 ***
 
-[@fest/core](../README.md) / isKeyType
+[@fest-lib/core](../README.md) / isKeyType
 
 # Function: isKeyType()
 

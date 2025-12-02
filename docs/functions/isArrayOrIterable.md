@@ -1,8 +1,8 @@
-[**@fest/core v0.0.0**](../README.md)
+[**@fest-lib/core v0.0.0**](../README.md)
 
 ***
 
-[@fest/core](../README.md) / isArrayOrIterable
+[@fest-lib/core](../README.md) / isArrayOrIterable
 
 # Function: isArrayOrIterable()
 

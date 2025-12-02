@@ -1,8 +1,8 @@
-[**@fest/core v0.0.0**](../README.md)
+[**@fest-lib/core v0.0.0**](../README.md)
 
 ***
 
-[@fest/core](../README.md) / getOrInsert
+[@fest-lib/core](../README.md) / getOrInsert
 
 # Function: getOrInsert()
 

@@ -1,8 +1,8 @@
-[**@fest/core v0.0.0**](../README.md)
+[**@fest-lib/core v0.0.0**](../README.md)
 
 ***
 
-[@fest/core](../README.md) / isPrimitive
+[@fest-lib/core](../README.md) / isPrimitive
 
 # Function: isPrimitive()
 

@@ -1,8 +1,8 @@
-[**@fest/core v0.0.0**](../README.md)
+[**@fest-lib/core v0.0.0**](../README.md)
 
 ***
 
-[@fest/core](../README.md) / isValidNumber
+[@fest-lib/core](../README.md) / isValidNumber
 
 # Function: isValidNumber()
 

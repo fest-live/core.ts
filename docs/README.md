@@ -1,8 +1,8 @@
-**@fest/core v0.0.0**
+**@fest-lib/core v0.0.0**
 
 ***
 
-# @fest/core v0.0.0
+# @fest-lib/core v0.0.0
 
 ## Type Aliases
 

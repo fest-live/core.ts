@@ -1,8 +1,8 @@
-[**@fest/core v0.0.0**](../README.md)
+[**@fest-lib/core v0.0.0**](../README.md)
 
 ***
 
-[@fest/core](../README.md) / cvt\_rel\_os\_to\_cs
+[@fest-lib/core](../README.md) / cvt\_rel\_os\_to\_cs
 
 # Function: cvt\_rel\_os\_to\_cs()
 

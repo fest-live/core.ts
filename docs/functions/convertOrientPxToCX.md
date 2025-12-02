@@ -1,8 +1,8 @@
-[**@fest/core v0.0.0**](../README.md)
+[**@fest-lib/core v0.0.0**](../README.md)
 
 ***
 
-[@fest/core](../README.md) / convertOrientPxToCX
+[@fest-lib/core](../README.md) / convertOrientPxToCX
 
 # Function: convertOrientPxToCX()
 
