@@ -6,7 +6,7 @@ export type keyType = string | number | symbol;
 
 //
 export const isIterable = (obj) => (typeof obj?.[Symbol.iterator] == "function");
-export const isKeyType = (prop: keyType | any) => (["symbol", "string", "number"].indexOf(typeof prop) >= 0);
+export const isKeyType  = (prop: keyType | any) => (["symbol", "string", "number"].indexOf(typeof prop) >= 0);
 export const isValidObj = (obj?: any)=> { return obj != null && (typeof obj == "function" || typeof obj == "object") && !(obj instanceof WeakRef); };
 export const mergeByKey = (items: any[]|Set<any>, key = "id")=>{
     const entries = Array.from(items?.values?.()).map((I)=>[I?.[key],I]);
@@ -90,7 +90,10 @@ export const bindFx = (target, fx)=>{
 export const bindCtx    = (target, fx) => ((typeof fx == "function" ? bindFx(target, fx) : fx) ?? fx);
 
 //
-export const callByProp = (unwrap, prop: keyType, cb, ctx)=>{
+export const callByProp = (unwrap, prop: keyType, cb, ctx) => {
+    if (prop == Symbol.iterator) { return callByAllProp(unwrap, cb, ctx); };
+
+    //
     if (
         prop == null ||
         //(prop == $extractKey$ || prop == $originalKey$ || prop == $registryKey$) ||
