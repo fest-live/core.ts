@@ -13,7 +13,7 @@ function getOrInsertComputed<K, V>(
    callbackFunction): V;
 ```
 
-Defined in: [Upsert.ts:49](https://github.com/fest-live/core.ts/blob/2cddd2eb563549b1305c7b2fc88f882dfe9e484a/src/utils/Upsert.ts#L49)
+Defined in: [Upsert.ts:49](https://github.com/fest-live/core.ts/blob/e528d9a238726823be1c3d912012f65a727f02a2/src/utils/Upsert.ts#L49)
 
 Get a value from a Map, or insert a computed value if the key doesn't exist.
 

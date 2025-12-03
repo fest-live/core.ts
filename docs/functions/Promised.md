@@ -13,7 +13,7 @@ function Promised<T>(
    reject?): any;
 ```
 
-Defined in: [Promised.ts:165](https://github.com/fest-live/core.ts/blob/2cddd2eb563549b1305c7b2fc88f882dfe9e484a/src/utils/Promised.ts#L165)
+Defined in: [Promised.ts:165](https://github.com/fest-live/core.ts/blob/e528d9a238726823be1c3d912012f65a727f02a2/src/utils/Promised.ts#L165)
 
 Wrap a promise or value in a Proxy that allows synchronous property access.
 For resolved promises, this enables accessing properties as if the promise was already resolved.

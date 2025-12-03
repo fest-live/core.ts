@@ -13,7 +13,7 @@ function cvt_cs_to_os(
    or_i): [number, number];
 ```
 
-Defined in: [Convert.ts:8](https://github.com/fest-live/core.ts/blob/2cddd2eb563549b1305c7b2fc88f882dfe9e484a/src/utils/Convert.ts#L8)
+Defined in: [Convert.ts:8](https://github.com/fest-live/core.ts/blob/e528d9a238726823be1c3d912012f65a727f02a2/src/utils/Convert.ts#L8)
 
 Convert position from client space to orientation space.
 

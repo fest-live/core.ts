@@ -10,7 +10,7 @@
 function canBeInteger(value): boolean;
 ```
 
-Defined in: [Primitive.ts:159](https://github.com/fest-live/core.ts/blob/2cddd2eb563549b1305c7b2fc88f882dfe9e484a/src/utils/Primitive.ts#L159)
+Defined in: [Primitive.ts:159](https://github.com/fest-live/core.ts/blob/e528d9a238726823be1c3d912012f65a727f02a2/src/utils/Primitive.ts#L159)
 
 ## Parameters
 
