@@ -1,6 +1,8 @@
 import "./utils/PromiseTry";
 
 //
+export * from "./utils/PromiseUtils";
+export * from "./utils/ChannelUtils";
 export * from "./utils/Upsert";
 export * from "./utils/Primitive";
 export * from "./utils/Object";
