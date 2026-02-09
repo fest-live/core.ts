@@ -107,16 +107,16 @@ export const callByProp = (unwrap, prop: keyType, cb, ctx) => {
 
     //
     if (unwrap instanceof Map || unwrap instanceof WeakMap) {
-        if (unwrap.has(prop as any)) { return callIfNotNull?.(unwrap.get(prop as any), prop); }
+        if (unwrap.has(prop as any)) { return callIfNotNull?.(unwrap.get(prop as any), prop, null, "@set"); }
     } else
         if (unwrap instanceof Set || unwrap instanceof WeakSet) {
-            if (unwrap.has(prop as any)) { return callIfNotNull?.(prop, prop); }
+            if (unwrap.has(prop as any)) { return callIfNotNull?.(prop, prop, null, "@add"); }
         } else
             if (Array.isArray(unwrap) && (typeof prop == "string" && [...prop?.matchAll?.(/^\d+$/g)]?.length == 1) && Number.isInteger(typeof prop == "string" ? parseInt(prop) : prop)) {
                 const index = typeof prop == "string" ? parseInt(prop) : prop;
                 return callIfNotNull?.(unwrap?.[index], index, null, "@add");
             } else
-                if (typeof unwrap == "function" || typeof unwrap == "object") { return callIfNotNull?.(unwrap?.[prop], prop); }
+                if (typeof unwrap == "function" || typeof unwrap == "object") { return callIfNotNull?.(unwrap?.[prop], prop, null, "@set"); }
 }
 
 //
