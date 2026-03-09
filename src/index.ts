@@ -10,6 +10,7 @@ export * from "./utils/Promised";
 export * from "./utils/WRef";
 export * from "./utils/Convert";
 export * from "./utils/GridItemUtils";
+export * from "./utils/UserPath";
 
 //
 export type { GridArgsType, GridItemType } from "./utils/Types";
