@@ -1,3 +1,5 @@
+import { installDomConstructorPolyfills } from "./runtime/dom-globals-polyfill";
+installDomConstructorPolyfills();
 import "./utils/PromiseTry";
 
 //
