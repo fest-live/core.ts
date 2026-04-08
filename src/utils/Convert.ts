@@ -1,4 +1,7 @@
 /**
+ * Orientation-space transforms for grids and drag vectors.
+ * Used by `GridItemUtils` / `resolveLocalPointToGridCell` and `fest/dom` launcher hit-testing.
+ *
  * Convert position from client space to orientation space.
  * @param pos_in_cs - Position in client space [x, y]
  * @param size_in_cs - Size in client space [width, height]

@@ -15,4 +15,4 @@ export * from "./utils/GridItemUtils";
 export * from "./utils/UserPath";
 
 //
-export type { GridArgsType, GridItemType } from "./utils/Types";
+export type { GridArgsType, GridItemType, GridLayoutLike } from "./utils/Types";
