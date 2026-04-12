@@ -44,7 +44,7 @@ export const $getValue = ($objOrPlain: any) => {
 
 //
 export const unwrap = (obj, fallback?: null|undefined|((...args: any[])=>any))=>{
-    return (obj?.[$fxy] ?? (fallback ?? obj));
+    return (obj?.[$fxy] ?? (obj != null ? obj : fallback) ?? fallback);
 }
 
 //
@@ -66,7 +66,7 @@ export const $set = (rv, key, val)=>{
 }
 
 //
-export const getRandomValues = (array: Uint8Array) => { return crypto?.getRandomValues ? crypto?.getRandomValues?.(array) : (()=>{
+export const getRandomValues = (array: Uint8Array) => { return crypto?.getRandomValues ? crypto?.getRandomValues?.(array as any) : (()=>{
     const values = new Uint8Array(array.length);
     for (let i = 0; i < array.length; i++) {
         values[i] = Math.floor(Math.random() * 256);

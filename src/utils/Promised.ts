@@ -104,15 +104,18 @@ class PromiseHandler {
             }
         }
 
-        // @ts-ignore
-        const result = Promised(actWith(target, async (obj)=>{
-            if (unwrap(obj) instanceof Promise) return Reflect.get(obj, prop, receiver);
-            if (isPrimitive(obj)) { return (prop == Symbol.toPrimitive || prop == Symbol.toStringTag) ? obj : undefined; }
-            let value: any = undefined;
-            try { value = Reflect.get(obj, prop, receiver); } catch (e) { value = target?.[prop]; }
-            if (typeof value == 'function') { return value?.bind?.(obj); }
-            return value;
-        }));
+        //
+        let result: any = undefined;
+        if (resolvedMap?.has?.(target) && (result = resolvedMap?.get?.(target))?.[prop] != null)
+            { result = resolvedMap?.get?.(target)?.[prop]; } else  // @ts-ignore
+            { result = Promised(actWith(target, async (obj)=>{
+                if (unwrap(obj) instanceof Promise) return Reflect.get(obj, prop, receiver);
+                if (isPrimitive(obj)) { return (prop == Symbol.toPrimitive || prop == Symbol.toStringTag) ? obj : undefined; }
+                let value: any = undefined;
+                try { value = Reflect.get(obj, prop, receiver); } catch (e) { value = target?.[prop]; }
+                if (typeof value == 'function') { return value?.bind?.(obj); }
+                return value;
+            })); }
 
         //
         if (prop == Symbol.toStringTag) {
@@ -123,7 +126,7 @@ class PromiseHandler {
         //
         if (prop == Symbol.toPrimitive) { return (hint?)=>{
             if (isPrimitive(result)) { return tryParseByHint(result, hint); };
-            return null;//tryParseByHint(result?.[Symbol.toPrimitive]?.());
+            return undefined;//tryParseByHint(result?.[Symbol.toPrimitive]?.());
         }}
 
         //
