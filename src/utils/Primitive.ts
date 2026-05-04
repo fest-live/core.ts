@@ -74,6 +74,13 @@ export const getRandomValues = (array: Uint8Array) => { return crypto?.getRandom
     return values;
 })(); };
 
+/**
+ * Clamp a number between min and max
+ */
+export function valueClamp(value: number, min: number, max: number): number {
+    return Math.min(Math.max(value, min), max);
+}
+
 //
 export const clamp  = (min, val, max) => Math.max(min, Math.min(val, max));
 export const withCtx = (target, got)=>{ if (typeof got == "function") { return got?.bind?.(target) ?? got; }; return got; }
