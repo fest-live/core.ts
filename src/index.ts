@@ -15,6 +15,7 @@ export * from "./utils/GridItemUtils";
 export * from "./utils/UserPath";
 export * from "./utils/Mapped";
 export * from "./utils/Phone";
+export * from "./utils/Time";
 
 //
 export type { GridArgsType, GridItemType, GridLayoutLike } from "./utils/Types";
