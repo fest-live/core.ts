@@ -13,6 +13,8 @@ export * from "./utils/WRef";
 export * from "./utils/Convert";
 export * from "./utils/GridItemUtils";
 export * from "./utils/UserPath";
+export * from "./utils/Mapped";
+export * from "./utils/Phone";
 
 //
 export type { GridArgsType, GridItemType, GridLayoutLike } from "./utils/Types";
