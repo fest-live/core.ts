@@ -1,4 +1,4 @@
-[**@fest-lib/core v0.0.0**](../README.md)
+[**@fest-lib/core v0.1.3**](../README.md)
 
 ***
 
@@ -10,10 +10,10 @@
 function cvt_os_to_cs(
    pos_in_os, 
    size_in_cs, 
-   or_i): [number, number];
+   or_i?): [number, number];
 ```
 
-Defined in: [Convert.ts:23](https://github.com/fest-live/core.ts/blob/e528d9a238726823be1c3d912012f65a727f02a2/src/utils/Convert.ts#L23)
+Defined in: Convert.ts:26
 
 ## Parameters
 
@@ -25,7 +25,7 @@ Defined in: [Convert.ts:23](https://github.com/fest-live/core.ts/blob/e528d9a238
 
 \[`number`, `number`\]
 
-### or\_i
+### or\_i?
 
 `number` = `0`
 

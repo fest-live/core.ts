@@ -1,4 +1,4 @@
-[**@fest-lib/core v0.0.0**](../README.md)
+[**@fest-lib/core v0.1.3**](../README.md)
 
 ***
 
@@ -10,10 +10,10 @@
 function getOrInsertComputed<K, V>(
    map, 
    key, 
-   callbackFunction): V;
+   callbackFunction?): V;
 ```
 
-Defined in: [Upsert.ts:49](https://github.com/fest-live/core.ts/blob/e528d9a238726823be1c3d912012f65a727f02a2/src/utils/Upsert.ts#L49)
+Defined in: Upsert.ts:49
 
 Get a value from a Map, or insert a computed value if the key doesn't exist.
 
@@ -45,7 +45,7 @@ The Map to get or insert into
 
 The key to look up
 
-### callbackFunction
+### callbackFunction?
 
 (`key`) => `V`
 

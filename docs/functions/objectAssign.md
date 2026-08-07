@@ -1,4 +1,4 @@
-[**@fest-lib/core v0.0.0**](../README.md)
+[**@fest-lib/core v0.1.3**](../README.md)
 
 ***
 
@@ -10,12 +10,12 @@
 function objectAssign(
    target, 
    value, 
-   name, 
-   removeNotExists, 
-   mergeKey): any;
+   name?, 
+   removeNotExists?, 
+   mergeKey?): any;
 ```
 
-Defined in: [Object.ts:43](https://github.com/fest-live/core.ts/blob/e528d9a238726823be1c3d912012f65a727f02a2/src/utils/Object.ts#L43)
+Defined in: Object.ts:43
 
 ## Parameters
 
@@ -27,15 +27,15 @@ Defined in: [Object.ts:43](https://github.com/fest-live/core.ts/blob/e528d9a2387
 
 `any`
 
-### name
+### name?
 
-[`keyType`](../type-aliases/keyType.md) | `null`
+[`keyType`](../type-aliases/keyType.md) \| `null`
 
-### removeNotExists
+### removeNotExists?
 
 `boolean` = `true`
 
-### mergeKey
+### mergeKey?
 
 `string` = `"id"`
 

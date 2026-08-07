@@ -1,4 +1,4 @@
-[**@fest-lib/core v0.0.0**](../README.md)
+[**@fest-lib/core v0.1.3**](../README.md)
 
 ***
 
@@ -7,10 +7,10 @@
 # Function: roundNearest()
 
 ```ts
-function roundNearest(number, N): number;
+function roundNearest(number, N?): number;
 ```
 
-Defined in: [Primitive.ts:102](https://github.com/fest-live/core.ts/blob/e528d9a238726823be1c3d912012f65a727f02a2/src/utils/Primitive.ts#L102)
+Defined in: Primitive.ts:109
 
 ## Parameters
 
@@ -18,7 +18,7 @@ Defined in: [Primitive.ts:102](https://github.com/fest-live/core.ts/blob/e528d9a
 
 `number`
 
-### N
+### N?
 
 `number` = `1`
 

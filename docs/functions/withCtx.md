@@ -1,4 +1,4 @@
-[**@fest-lib/core v0.0.0**](../README.md)
+[**@fest-lib/core v0.1.3**](../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 function withCtx(target, got): any;
 ```
 
-Defined in: [Primitive.ts:79](https://github.com/fest-live/core.ts/blob/e528d9a238726823be1c3d912012f65a727f02a2/src/utils/Primitive.ts#L79)
+Defined in: Primitive.ts:86
 
 ## Parameters
 

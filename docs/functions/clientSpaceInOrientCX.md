@@ -1,4 +1,4 @@
-[**@fest-lib/core v0.0.0**](../README.md)
+[**@fest-lib/core v0.1.3**](../README.md)
 
 ***
 
@@ -10,10 +10,10 @@
 function clientSpaceInOrientCX(
    $clientPx, 
    gridArgs, 
-   orient): [number, number];
+   orient?): [number, number];
 ```
 
-Defined in: [GridItemUtils.ts:96](https://github.com/fest-live/core.ts/blob/e528d9a238726823be1c3d912012f65a727f02a2/src/utils/GridItemUtils.ts#L96)
+Defined in: GridItemUtils.ts:170
 
 ## Parameters
 
@@ -25,7 +25,7 @@ Defined in: [GridItemUtils.ts:96](https://github.com/fest-live/core.ts/blob/e528
 
 [`GridArgsType`](../interfaces/GridArgsType.md)
 
-### orient
+### orient?
 
 `number` = `0`
 

@@ -1,4 +1,4 @@
-[**@fest-lib/core v0.0.0**](../README.md)
+[**@fest-lib/core v0.1.3**](../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 function getValue(val): any;
 ```
 
-Defined in: [Primitive.ts:190](https://github.com/fest-live/core.ts/blob/e528d9a238726823be1c3d912012f65a727f02a2/src/utils/Primitive.ts#L190)
+Defined in: Primitive.ts:197
 
 Get the value from a value reference or return the value itself.
 

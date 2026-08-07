@@ -1,4 +1,4 @@
-[**@fest-lib/core v0.0.0**](../README.md)
+[**@fest-lib/core v0.1.3**](../README.md)
 
 ***
 
@@ -10,10 +10,10 @@
 function getOrInsert<K, V>(
    map, 
    key, 
-   defaultValue): V;
+   defaultValue?): V;
 ```
 
-Defined in: [Upsert.ts:35](https://github.com/fest-live/core.ts/blob/e528d9a238726823be1c3d912012f65a727f02a2/src/utils/Upsert.ts#L35)
+Defined in: Upsert.ts:35
 
 Get a value from a Map, or insert a default value if the key doesn't exist.
 
@@ -45,7 +45,7 @@ The Map to get or insert into
 
 The key to look up
 
-### defaultValue
+### defaultValue?
 
 () => `V`
 

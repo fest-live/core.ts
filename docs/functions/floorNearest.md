@@ -1,4 +1,4 @@
-[**@fest-lib/core v0.0.0**](../README.md)
+[**@fest-lib/core v0.1.3**](../README.md)
 
 ***
 
@@ -7,10 +7,10 @@
 # Function: floorNearest()
 
 ```ts
-function floorNearest(number, N): number;
+function floorNearest(number, N?): number;
 ```
 
-Defined in: [Primitive.ts:103](https://github.com/fest-live/core.ts/blob/e528d9a238726823be1c3d912012f65a727f02a2/src/utils/Primitive.ts#L103)
+Defined in: Primitive.ts:110
 
 ## Parameters
 
@@ -18,7 +18,7 @@ Defined in: [Primitive.ts:103](https://github.com/fest-live/core.ts/blob/e528d9a
 
 `number`
 
-### N
+### N?
 
 `number` = `1`
 

@@ -1,4 +1,4 @@
-[**@fest-lib/core v0.0.0**](../README.md)
+[**@fest-lib/core v0.1.3**](../README.md)
 
 ***
 
@@ -13,7 +13,7 @@ function Promised<T>(
    reject?): any;
 ```
 
-Defined in: [Promised.ts:165](https://github.com/fest-live/core.ts/blob/e528d9a238726823be1c3d912012f65a727f02a2/src/utils/Promised.ts#L165)
+Defined in: Promised.ts:168
 
 Wrap a promise or value in a Proxy that allows synchronous property access.
 For resolved promises, this enables accessing properties as if the promise was already resolved.
@@ -36,15 +36,15 @@ The promise or value to wrap
 
 ### resolve?
 
-Optional resolve callback
+((...`args`) => `void`) \| `null`
 
-(...`args`) => `void` | `null`
+Optional resolve callback
 
 ### reject?
 
-Optional reject callback
+((...`args`) => `void`) \| `null`
 
-(...`args`) => `void` | `null`
+Optional reject callback
 
 ## Returns
 

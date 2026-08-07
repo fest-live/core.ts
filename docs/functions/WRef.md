@@ -1,4 +1,4 @@
-[**@fest-lib/core v0.0.0**](../README.md)
+[**@fest-lib/core v0.1.3**](../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 function WRef<T>(target): WR<T>;
 ```
 
-Defined in: [WRef.ts:99](https://github.com/fest-live/core.ts/blob/e528d9a238726823be1c3d912012f65a727f02a2/src/utils/WRef.ts#L99)
+Defined in: WRef.ts:99
 
 Create a WeakRef wrapper proxy that allows safe access to weakly referenced objects.
 The proxy automatically dereferences WeakRefs when accessing properties and handles
@@ -28,9 +28,9 @@ The type of the target object (must be object or Function)
 
 ### target
 
-The target object or WeakRef to wrap
+`T` \| `WeakRef`\<`T`\>
 
-`T` | `WeakRef`\<`T`\>
+The target object or WeakRef to wrap
 
 ## Returns
 

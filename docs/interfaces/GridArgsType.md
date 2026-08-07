@@ -1,4 +1,4 @@
-[**@fest-lib/core v0.0.0**](../README.md)
+[**@fest-lib/core v0.1.3**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: GridArgsType
 
-Defined in: [Types.ts:9](https://github.com/fest-live/core.ts/blob/e528d9a238726823be1c3d912012f65a727f02a2/src/utils/Types.ts#L9)
+Defined in: Types.ts:17
 
 ## Properties
 
@@ -16,7 +16,7 @@ Defined in: [Types.ts:9](https://github.com/fest-live/core.ts/blob/e528d9a238726
 item: GridItemType;
 ```
 
-Defined in: [Types.ts:10](https://github.com/fest-live/core.ts/blob/e528d9a238726823be1c3d912012f65a727f02a2/src/utils/Types.ts#L10)
+Defined in: Types.ts:18
 
 ***
 
@@ -29,17 +29,17 @@ items:
   | GridItemType[];
 ```
 
-Defined in: [Types.ts:12](https://github.com/fest-live/core.ts/blob/e528d9a238726823be1c3d912012f65a727f02a2/src/utils/Types.ts#L12)
+Defined in: Types.ts:20
 
 ***
 
 ### layout
 
 ```ts
-layout: [number, number];
+layout: GridLayoutLike;
 ```
 
-Defined in: [Types.ts:13](https://github.com/fest-live/core.ts/blob/e528d9a238726823be1c3d912012f65a727f02a2/src/utils/Types.ts#L13)
+Defined in: Types.ts:21
 
 ***
 
@@ -49,7 +49,7 @@ Defined in: [Types.ts:13](https://github.com/fest-live/core.ts/blob/e528d9a23872
 list: string[] | Set<string>;
 ```
 
-Defined in: [Types.ts:11](https://github.com/fest-live/core.ts/blob/e528d9a238726823be1c3d912012f65a727f02a2/src/utils/Types.ts#L11)
+Defined in: Types.ts:19
 
 ***
 
@@ -59,4 +59,4 @@ Defined in: [Types.ts:11](https://github.com/fest-live/core.ts/blob/e528d9a23872
 size: [number, number];
 ```
 
-Defined in: [Types.ts:14](https://github.com/fest-live/core.ts/blob/e528d9a238726823be1c3d912012f65a727f02a2/src/utils/Types.ts#L14)
+Defined in: Types.ts:22

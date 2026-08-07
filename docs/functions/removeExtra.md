@@ -1,4 +1,4 @@
-[**@fest-lib/core v0.0.0**](../README.md)
+[**@fest-lib/core v0.1.3**](../README.md)
 
 ***
 
@@ -10,10 +10,10 @@
 function removeExtra(
    target, 
    value, 
-   name): any;
+   name?): any;
 ```
 
-Defined in: [Object.ts:18](https://github.com/fest-live/core.ts/blob/e528d9a238726823be1c3d912012f65a727f02a2/src/utils/Object.ts#L18)
+Defined in: Object.ts:18
 
 ## Parameters
 
@@ -25,9 +25,9 @@ Defined in: [Object.ts:18](https://github.com/fest-live/core.ts/blob/e528d9a2387
 
 `any`
 
-### name
+### name?
 
-[`keyType`](../type-aliases/keyType.md) | `null`
+[`keyType`](../type-aliases/keyType.md) \| `null`
 
 ## Returns
 

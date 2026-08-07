@@ -1,4 +1,4 @@
-[**@fest-lib/core v0.0.0**](../README.md)
+[**@fest-lib/core v0.1.3**](../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 function redirectCell($preCell, gridArgs): [number, number];
 ```
 
-Defined in: [GridItemUtils.ts:17](https://github.com/fest-live/core.ts/blob/e528d9a238726823be1c3d912012f65a727f02a2/src/utils/GridItemUtils.ts#L17)
+Defined in: GridItemUtils.ts:90
 
 Find a non-busy cell near the preferred cell in a grid layout.
 If the preferred cell is busy, searches nearby cells to find an available one.

@@ -1,4 +1,4 @@
-[**@fest-lib/core v0.0.0**](../README.md)
+[**@fest-lib/core v0.1.3**](../README.md)
 
 ***
 
@@ -10,10 +10,13 @@
 function cvt_cs_to_os(
    pos_in_cs, 
    size_in_cs, 
-   or_i): [number, number];
+   or_i?): [number, number];
 ```
 
-Defined in: [Convert.ts:8](https://github.com/fest-live/core.ts/blob/e528d9a238726823be1c3d912012f65a727f02a2/src/utils/Convert.ts#L8)
+Defined in: Convert.ts:11
+
+Orientation-space transforms for grids and drag vectors.
+Used by `GridItemUtils` / `resolveLocalPointToGridCell` and `fest/dom` launcher hit-testing.
 
 Convert position from client space to orientation space.
 
@@ -31,7 +34,7 @@ Position in client space [x, y]
 
 Size in client space [width, height]
 
-### or\_i
+### or\_i?
 
 `number` = `0`
 
