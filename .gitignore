@@ -286,5 +286,5 @@ src/**/*.js.map
 !./dist/
 !./dist
 !./dist/**
-!/.dist/*
+!./dist/*
 !./dist/**/*
