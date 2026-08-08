@@ -36,7 +36,9 @@
             "import": "./dist/core.js",
             "default": "./dist/core.js"
         },
-        "./package.json": "./package.json"
+        "./package.json": "./package.json",
+        "./dist/index.js": "./dist/core.js",
+        "./index.js": "./dist/core.js"
     },
     "scripts": {
         "test": "vite --host 0.0.0.0",
