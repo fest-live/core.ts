@@ -171,7 +171,9 @@ export const isNotEqual = (a, b)=>{
 }
 
 //
-export const boundCtx  = new WeakMap();
+const boundCtxSymbol = Symbol.for("object.boundCtx");
+globalThis[boundCtxSymbol] ??= new WeakMap();
+export const boundCtx  = globalThis[boundCtxSymbol];
 
 //
 export const isArrayInvalidKey = (key: keyType | null | undefined | any, src?: any) => {
