@@ -1,4 +1,4 @@
-[**@fest-lib/core v0.1.6**](../README.md)
+[**@fest-lib/core v0.1.7**](../README.md)
 
 ***
 
@@ -10,4 +10,4 @@
 const inProxy: WeakMap<WeakKey, any>;
 ```
 
-Defined in: Object.ts:183
+Defined in: Object.ts:185

@@ -1,4 +1,4 @@
-[**@fest-lib/core v0.1.6**](../README.md)
+[**@fest-lib/core v0.1.7**](../README.md)
 
 ***
 
@@ -13,7 +13,7 @@ function bindEvent(
    value): any;
 ```
 
-Defined in: Object.ts:214
+Defined in: Object.ts:216
 
 ## Parameters
 

@@ -1,4 +1,4 @@
-[**@fest-lib/core v0.1.6**](../README.md)
+[**@fest-lib/core v0.1.7**](../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 function isArrayInvalidKey(key, src?): boolean;
 ```
 
-Defined in: Object.ts:177
+Defined in: Object.ts:179
 
 ## Parameters
 

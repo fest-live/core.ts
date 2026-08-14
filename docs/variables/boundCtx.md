@@ -1,4 +1,4 @@
-[**@fest-lib/core v0.1.6**](../README.md)
+[**@fest-lib/core v0.1.7**](../README.md)
 
 ***
 
@@ -7,7 +7,7 @@
 # Variable: boundCtx
 
 ```ts
-const boundCtx: WeakMap<WeakKey, any>;
+const boundCtx: any;
 ```
 
-Defined in: Object.ts:174
+Defined in: Object.ts:176

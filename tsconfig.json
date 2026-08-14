@@ -15,24 +15,37 @@
         "outDir": "./dist/",
         "paths": {
             "@fest-lib/": [
-                "../../shared/fest/*",
-                "./node_modules/@fest-lib/*"
+                "../../shared/fest/*"
             ],
             "@fest-lib/cdnImport": [
-                "../../cdnImport.mjs",
-                "./node_modules/@fest-lib/cdnImport"
+                "../../cdnImport.mjs"
             ],
             "@fest-lib/dom": [
-                "../dom.ts/src/index.ts",
-                "./node_modules/@fest-lib/dom/src/index.ts"
+                "../dom.ts/src/index.ts"
+            ],
+            "@fest-lib/lure": [
+                "../lur.e/src/index.ts"
+            ],
+            "@fest-lib/object": [
+                "./src/index.ts"
+            ],
+            "@fest-lib/fl-ui": [
+                "./src/index.ts"
+            ],
+            "@fest-lib/ui": [
+                "./src/index.ts"
+            ],
+            "@fest-lib/uniform": [
+                "../uniform.ts/src/index.ts"
+            ],
+            "@fest-lib/theme": [
+                "../theme.core/src/index.ts"
             ],
             "@fest-lib/polyfill/*": [
-                "../../shared/fest/polyfill/*",
-                "./node_modules/@fest-lib/polyfill/*/src/index.ts"
+                "../../shared/fest/polyfill/*"
             ],
             "polyfill/*": [
-                "../../shared/fest/polyfill/*",
-                "./node_modules/polyfill/*/src/index.ts"
+                "../../shared/fest/polyfill/*"
             ]
         },
         "target": "ESNext",
@@ -52,11 +65,11 @@
         "allowUnreachableCode": true,
         "allowUnusedLabels": true,
         "noImplicitAny": false,
-        "declaration": false,
         "noImplicitThis": false,
+        "declaration": true,
+        "declarationMap": true,
         "inlineSources": true,
         "inlineSourceMap": true,
-        "sourceMap": false,
         "typeRoots": [
             "plugins/global.d.ts"
         ],
