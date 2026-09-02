@@ -53,6 +53,9 @@ export type MountedFsResponse = {
     file?: MountedFsFileBody;
     stat?: { size: number; isFile: boolean; isDirectory: boolean };
     error?: string;
+    /** Host attached `/ssre/fs/ws`. Client must not dial WS unless this is true. */
+    ws?: boolean;
+    socketio?: boolean;
 };
 
 export const createMountedFsId = (): string => {
