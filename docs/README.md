@@ -1,8 +1,8 @@
-**@fest-lib/core v0.1.20**
+**@fest-lib/core v0.1.21**
 
 ***
 
-# @fest-lib/core v0.1.20
+# @fest-lib/core v0.1.21
 
 ## Classes
 
@@ -24,6 +24,12 @@
 - [DatasetValue](type-aliases/DatasetValue.md)
 - [GridLayoutLike](type-aliases/GridLayoutLike.md)
 - [keyType](type-aliases/keyType.md)
+- [MountedFsEntry](type-aliases/MountedFsEntry.md)
+- [MountedFsFileBody](type-aliases/MountedFsFileBody.md)
+- [MountedFsKind](type-aliases/MountedFsKind.md)
+- [MountedFsOp](type-aliases/MountedFsOp.md)
+- [MountedFsRequest](type-aliases/MountedFsRequest.md)
+- [MountedFsResponse](type-aliases/MountedFsResponse.md)
 - [PromiseLike](type-aliases/PromiseLike.md)
 - [ResolvedMode](type-aliases/ResolvedMode.md)
 - [WeakKey](type-aliases/WeakKey.md)
@@ -42,6 +48,9 @@
 - [globalChannelRegistry](variables/globalChannelRegistry.md)
 - [inProxy](variables/inProxy.md)
 - [INTEGER\_REGEXP](variables/INTEGER_REGEXP.md)
+- [MOUNTED\_FS\_EVENT](variables/MOUNTED_FS_EVENT.md)
+- [MOUNTED\_FS\_HTTP\_PATH](variables/MOUNTED_FS_HTTP_PATH.md)
+- [MOUNTED\_FS\_WS\_PATH](variables/MOUNTED_FS_WS_PATH.md)
 - [PHONE\_CANDIDATE\_RE](variables/PHONE_CANDIDATE_RE.md)
 
 ## Functions
@@ -71,6 +80,7 @@
 - [convertOrientPxToCX](functions/convertOrientPxToCX.md)
 - [createChannelProxy](functions/createChannelProxy.md)
 - [createDeferred](functions/createDeferred.md)
+- [createMountedFsId](functions/createMountedFsId.md)
 - [cvt\_cs\_to\_os](functions/cvt_cs_to_os.md)
 - [cvt\_os\_to\_cs](functions/cvt_os_to_cs.md)
 - [cvt\_rel\_cs\_to\_os](functions/cvt_rel_cs_to_os.md)
@@ -113,8 +123,11 @@
 - [isDate](functions/isDate.md)
 - [isEmpty](functions/isEmpty.md)
 - [isHasPrimitives](functions/isHasPrimitives.md)
+- [isIdbScopePath](functions/isIdbScopePath.md)
 - [isIterable](functions/isIterable.md)
 - [isKeyType](functions/isKeyType.md)
+- [isMountedFsRequest](functions/isMountedFsRequest.md)
+- [isMountedFsResponse](functions/isMountedFsResponse.md)
 - [isNotComplexArray](functions/isNotComplexArray.md)
 - [isNotEqual](functions/isNotEqual.md)
 - [isObject](functions/isObject.md)
@@ -124,6 +137,7 @@
 - [isPromise](functions/isPromise.md)
 - [isPureHHMM](functions/isPureHHMM.md)
 - [isRef](functions/isRef.md)
+- [isStorageScopePath](functions/isStorageScopePath.md)
 - [isSymbol](functions/isSymbol.md)
 - [isTypedArray](functions/isTypedArray.md)
 - [isUserScopePath](functions/isUserScopePath.md)
@@ -147,6 +161,7 @@
 - [objectAssignNotEqual](functions/objectAssignNotEqual.md)
 - [parseAndGetCorrectTime](functions/parseAndGetCorrectTime.md)
 - [parseDateCorrectly](functions/parseDateCorrectly.md)
+- [parseMountedFsMessage](functions/parseMountedFsMessage.md)
 - [potentiallyAsync](functions/potentiallyAsync.md)
 - [potentiallyAsyncMap](functions/potentiallyAsyncMap.md)
 - [Promised](functions/Promised.md)
@@ -163,6 +178,9 @@
 - [sleep](functions/sleep.md)
 - [SPLICE\_INTO\_ONCE](functions/SPLICE_INTO_ONCE.md)
 - [splitCandidates](functions/splitCandidates.md)
+- [storagePathCandidates](functions/storagePathCandidates.md)
+- [stripIdbScopePrefix](functions/stripIdbScopePrefix.md)
+- [stripStorageScopePrefix](functions/stripStorageScopePrefix.md)
 - [stripUserScopePrefix](functions/stripUserScopePrefix.md)
 - [throttle](functions/throttle.md)
 - [toFiniteNumber](functions/toFiniteNumber.md)
