@@ -1,4 +1,4 @@
-[**@fest-lib/core v0.1.19**](../README.md)
+[**@fest-lib/core v0.1.20**](../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 function objectAssignNotEqual(dst, src?): any;
 ```
 
-Defined in: Object.ts:123
+Defined in: Object.ts:121
 
 ## Parameters
 

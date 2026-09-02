@@ -1,6 +1,24 @@
 /**
  * Promise utilities for advanced async operations
  */
+import "./PromiseTry";
+import { resolved } from "./Resolved";
+
+const isThenable = (value: any) => value instanceof Promise || typeof value?.then == "function";
+
+/**
+ * Await a record of thenables as a same-shaped object (`Promise.allKeyed`).
+ */
+export function allKeyed<D extends Record<string | symbol, unknown>>(promises: D) {
+    return Promise.allKeyed(promises);
+}
+
+/**
+ * Settle a record of thenables as a same-shaped object (`Promise.allSettledKeyed`).
+ */
+export function allSettledKeyed<D extends Record<string | symbol, unknown>>(promises: D) {
+    return Promise.allSettledKeyed(promises);
+}
 
 /**
  * Create a promised value that resolves when set
@@ -86,14 +104,26 @@ export class AsyncQueue {
 }
 
 /**
- * Create a timeout promise that rejects after specified time
+ * Create a timeout promise that rejects after specified time.
+ * A plain object of thenables is awaited via `Promise.allKeyed`.
  */
-export function withTimeout<T>(promise: Promise<T>, timeoutMs: number, timeoutMessage = 'Operation timed out'): Promise<T> {
+export function withTimeout<D extends Record<string | symbol, unknown>>(
+    promises: D,
+    timeoutMs: number,
+    timeoutMessage?: string
+): Promise<{ [K in keyof D]: Awaited<D[K]> }>;
+export function withTimeout<T>(promise: Promise<T>, timeoutMs: number, timeoutMessage?: string): Promise<T>;
+export function withTimeout<T>(
+    promise: Promise<T> | Record<string | symbol, unknown>,
+    timeoutMs: number,
+    timeoutMessage = 'Operation timed out'
+): Promise<T> {
+    const pending = (isThenable(promise) ? promise : resolved(promise)) as Promise<T>;
     const timeoutPromise = new Promise<never>((_, reject) => {
         setTimeout(() => reject(new Error(timeoutMessage)), timeoutMs);
     });
 
-    return Promise.race([promise, timeoutPromise]);
+    return Promise.race([pending, timeoutPromise]);
 }
 
 /**

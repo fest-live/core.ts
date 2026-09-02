@@ -1,4 +1,4 @@
-[**@fest-lib/core v0.1.19**](../README.md)
+[**@fest-lib/core v0.1.20**](../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 function createDeferred<T>(): object;
 ```
 
-Defined in: PromiseUtils.ts:8
+Defined in: PromiseUtils.ts:26
 
 Create a promised value that resolves when set
 

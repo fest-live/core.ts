@@ -1,4 +1,4 @@
-[**@fest-lib/core v0.1.19**](../README.md)
+[**@fest-lib/core v0.1.20**](../README.md)
 
 ***
 
@@ -13,7 +13,7 @@ function getOrInsertComputed<K, V>(
    callbackFunction?): V;
 ```
 
-Defined in: Upsert.ts:49
+Defined in: Upsert.ts:34
 
 Get a value from a Map, or insert a computed value if the key doesn't exist.
 

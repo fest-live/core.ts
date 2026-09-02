@@ -1,11 +1,21 @@
+import "./PromiseTry";
 import { unwrap, isPrimitive, tryParseByHint, fixFx } from "./Primitive";
+import { hasPendingPromises, resolved } from "./Resolved";
 
-//
-const resolvedMap = new WeakMap(), handledMap = new WeakMap();
+const resolvedSymbol = Symbol.for("@resolved-promise");
+const handledSymbol = Symbol.for("@handled-promise");
+
+globalThis[resolvedSymbol] ??= new WeakMap();
+globalThis[handledSymbol] ??= new WeakMap();
+
+const resolvedMap = globalThis[resolvedSymbol], handledMap = globalThis[handledSymbol];
+const $extractKey$ = Symbol.for("@extract");
+
+const isThenable = (value: any) => value instanceof Promise || typeof value?.then == "function";
+
 const actWith = (promiseOrPlain, cb)=>{
-    if (promiseOrPlain instanceof Promise || typeof promiseOrPlain?.then == "function") {
+    if (isThenable(promiseOrPlain)) {
         if (resolvedMap?.has?.(promiseOrPlain)) { return cb(resolvedMap?.get?.(promiseOrPlain)); }
-        // @ts-ignore
         return Promise.try?.(async ()=>{
             const item = await promiseOrPlain;
             resolvedMap?.set?.(promiseOrPlain, item);
@@ -165,11 +175,44 @@ export type PromiseLike<T=any> = Promise<T>|any;
  * @param reject - Optional reject callback
  * @returns A proxy that allows synchronous-style access to promise values
  */
-export function Promised<T=any>(promise: PromiseLike<T>, resolve?: ((...args: any[])=>void)|null, reject?: ((...args: any[])=>void)|null) {
-    if (!(promise instanceof Promise || typeof promise?.then == "function")) { return promise; }
-    if (resolvedMap?.has?.(promise)) { return resolvedMap?.get?.(promise); };
-    if (!handledMap?.has?.(promise)) { promise?.then?.((item)=>resolvedMap?.set?.(promise, item)); } // @ts-ignore
-    return handledMap?.getOrInsertComputed?.(promise, ()=>new Proxy<PromiseLike<T>>(fixFx(promise), new PromiseHandler(resolve, reject)));
+export interface Promised {
+    allKeyed<D extends Record<string | symbol, unknown>>(
+        promises: D,
+        resolve?: ((...args: any[])=>void)|null,
+        reject?: ((...args: any[])=>void)|null
+    ): any;
+    allSettledKeyed<D extends Record<string | symbol, unknown>>(
+        promises: D,
+        resolve?: ((...args: any[])=>void)|null,
+        reject?: ((...args: any[])=>void)|null
+    ): any;
 }
+
+export function Promised<T=any>(promise: PromiseLike<T>, resolve?: ((...args: any[])=>void)|null, reject?: ((...args: any[])=>void)|null) {
+    if (promise != null && typeof promise?.resolved == "function" && promise[$extractKey$] != null && hasPendingPromises(promise)) {
+        return Promised(promise.resolved(), resolve, reject);
+    }
+    if (!isThenable(promise) && hasPendingPromises(promise)) { return Promised(resolved(promise), resolve, reject); }
+    if (!isThenable(promise)) { return promise; }
+    if (resolvedMap?.has?.(promise)) { return resolvedMap?.get?.(promise); };
+    if (!handledMap?.has?.(promise)) { promise?.then?.((item)=>resolvedMap?.set?.(promise, item)); }
+    return handledMap.getOrInsertComputed(promise, ()=>new Proxy<PromiseLike<T>>(fixFx(promise), new PromiseHandler(resolve, reject)));
+}
+
+Promised.allKeyed = function <D extends Record<string | symbol, unknown>>(
+    promises: D,
+    resolve?: ((...args: any[])=>void)|null,
+    reject?: ((...args: any[])=>void)|null
+) {
+    return Promised(Promise.allKeyed(promises), resolve, reject);
+};
+
+Promised.allSettledKeyed = function <D extends Record<string | symbol, unknown>>(
+    promises: D,
+    resolve?: ((...args: any[])=>void)|null,
+    reject?: ((...args: any[])=>void)|null
+) {
+    return Promised(Promise.allSettledKeyed(promises), resolve, reject);
+};
 
 //if (["then", "catch", "finally"].includes(prop as string)) { return (typeof withUpdate?.[prop] == "function" ? withUpdate?.[prop]?.bind?.(withUpdate) : withUpdate?.[prop]); }

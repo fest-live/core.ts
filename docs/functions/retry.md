@@ -1,4 +1,4 @@
-[**@fest-lib/core v0.1.19**](../README.md)
+[**@fest-lib/core v0.1.20**](../README.md)
 
 ***
 
@@ -14,7 +14,7 @@ function retry<T>(
 backoffMultiplier?): Promise<T>;
 ```
 
-Defined in: PromiseUtils.ts:102
+Defined in: PromiseUtils.ts:132
 
 Retry an async operation with exponential backoff
 

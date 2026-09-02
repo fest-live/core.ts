@@ -1,8 +1,8 @@
-**@fest-lib/core v0.1.19**
+**@fest-lib/core v0.1.20**
 
 ***
 
-# @fest-lib/core v0.1.19
+# @fest-lib/core v0.1.20
 
 ## Classes
 
@@ -16,6 +16,7 @@
 - [GridArgsType](interfaces/GridArgsType.md)
 - [GridItemType](interfaces/GridItemType.md)
 - [NormalizeOptions](interfaces/NormalizeOptions.md)
+- [Promised](interfaces/Promised.md)
 - [TimeType](interfaces/TimeType.md)
 
 ## Type Aliases
@@ -24,6 +25,7 @@
 - [GridLayoutLike](type-aliases/GridLayoutLike.md)
 - [keyType](type-aliases/keyType.md)
 - [PromiseLike](type-aliases/PromiseLike.md)
+- [ResolvedMode](type-aliases/ResolvedMode.md)
 - [WeakKey](type-aliases/WeakKey.md)
 - [WR](type-aliases/WR.md)
 - [WRef](type-aliases/WRef.md)
@@ -47,6 +49,8 @@
 - [$avoidTrigger](functions/$avoidTrigger.md)
 - [$getValue](functions/$getValue.md)
 - [$set](functions/$set.md)
+- [allKeyed](functions/allKeyed.md)
+- [allSettledKeyed](functions/allSettledKeyed.md)
 - [bindCtx](functions/bindCtx.md)
 - [bindEvent](functions/bindEvent.md)
 - [bindFx](functions/bindFx.md)
@@ -98,6 +102,7 @@
 - [getValue](functions/getValue.md)
 - [gridItemsAsArray](functions/gridItemsAsArray.md)
 - [handleListeners](functions/handleListeners.md)
+- [hasPendingPromises](functions/hasPendingPromises.md)
 - [hasProperty](functions/hasProperty.md)
 - [hasValue](functions/hasValue.md)
 - [isArrayInvalidKey](functions/isArrayInvalidKey.md)
@@ -151,6 +156,7 @@
 - [REMOVE\_IF\_HAS\_SIMILAR](functions/REMOVE_IF_HAS_SIMILAR.md)
 - [removeExtra](functions/removeExtra.md)
 - [renderTabName](functions/renderTabName.md)
+- [resolved](functions/resolved.md)
 - [resolveLocalPointToGridCell](functions/resolveLocalPointToGridCell.md)
 - [retry](functions/retry.md)
 - [roundNearest](functions/roundNearest.md)

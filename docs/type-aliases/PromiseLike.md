@@ -1,4 +1,4 @@
-[**@fest-lib/core v0.1.19**](../README.md)
+[**@fest-lib/core v0.1.20**](../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 type PromiseLike<T> = Promise<T> | any;
 ```
 
-Defined in: Promised.ts:157
+Defined in: Promised.ts:167
 
 Type alias for Promise-like values (Promise or any value).
 

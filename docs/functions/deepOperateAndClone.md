@@ -1,4 +1,4 @@
-[**@fest-lib/core v0.1.19**](../README.md)
+[**@fest-lib/core v0.1.20**](../README.md)
 
 ***
 
@@ -13,7 +13,7 @@ function deepOperateAndClone(
    $prev?): any;
 ```
 
-Defined in: Object.ts:189
+Defined in: Object.ts:187
 
 ## Parameters
 

@@ -80,8 +80,6 @@ export const objectAssign = (target, value, name: keyType | null = null, removeN
 
 //
 export const bindFx = (target, fx)=>{
-    // !experimental `getOrInsert` feature!
-    // @ts-ignore
     const be = boundCtx.getOrInsert(target, new WeakMap());
     return be.getOrInsert(fx, fx?.bind?.(target));
 }

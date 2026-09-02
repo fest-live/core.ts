@@ -1,27 +1,13 @@
-
-// @ts-ignore
-WeakMap.prototype.getOrInsert ??= function (key, defaultValue) {
-    if (!this.has(key)) { this.set(key, defaultValue); }
-    return this.get(key);
-};
-
-// @ts-ignore
-WeakMap.prototype.getOrInsertComputed ??= function (key, callbackFunction) {
-    if (!this.has(key)) { this.set(key, callbackFunction(key)); }
-    return this.get(key);
-};
-
-// @ts-ignore
-Map.prototype.getOrInsert ??= function (key, defaultValue) {
-    if (!this.has(key)) { this.set(key, defaultValue); }
-    return this.get(key);
-};
-
-// @ts-ignore
-Map.prototype.getOrInsertComputed ??= function (key, callbackFunction) {
-    if (!this.has(key)) { this.set(key, callbackFunction(key)); }
-    return this.get(key);
-};
+declare global {
+    interface Map<K, V> {
+        getOrInsert(key: K, defaultValue: V): V;
+        getOrInsertComputed(key: K, callbackFunction: (key: K) => V): V;
+    }
+    interface WeakMap<K extends WeakKey, V> {
+        getOrInsert(key: K, defaultValue: V): V;
+        getOrInsertComputed(key: K, callbackFunction: (key: K) => V): V;
+    }
+}
 
 /**
  * Get a value from a Map, or insert a default value if the key doesn't exist.
@@ -33,8 +19,7 @@ Map.prototype.getOrInsertComputed ??= function (key, callbackFunction) {
  * @returns The value from the map (existing or newly inserted)
  */
 export const getOrInsert = <K, V>(map: Map<K, V>, key: K, defaultValue: () => V = () => (null as unknown as V)) => {
-    if (!map?.has?.(key)) { map?.set?.(key, defaultValue?.()); }
-    return map?.get?.(key) as V;
+    return map?.getOrInsertComputed?.(key, () => defaultValue?.()) as V;
 };
 
 /**
@@ -47,6 +32,5 @@ export const getOrInsert = <K, V>(map: Map<K, V>, key: K, defaultValue: () => V 
  * @returns The value from the map (existing or newly computed and inserted)
  */
 export const getOrInsertComputed = <K, V>(map: Map<K, V>, key: K, callbackFunction: (key: K) => V = () => (null as unknown as V)) => {
-    if (!map?.has?.(key)) { map?.set?.(key, callbackFunction?.(key)); }
-    return map?.get?.(key) as V;
+    return map?.getOrInsertComputed?.(key, callbackFunction) as V;
 };

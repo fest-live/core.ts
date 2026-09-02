@@ -1,4 +1,4 @@
-[**@fest-lib/core v0.1.19**](../README.md)
+[**@fest-lib/core v0.1.20**](../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 function contextify(pc, name): any;
 ```
 
-Defined in: Object.ts:186
+Defined in: Object.ts:184
 
 ## Parameters
 

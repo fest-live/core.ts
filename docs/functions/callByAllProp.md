@@ -1,4 +1,4 @@
-[**@fest-lib/core v0.1.19**](../README.md)
+[**@fest-lib/core v0.1.20**](../README.md)
 
 ***
 
@@ -13,7 +13,7 @@ function callByAllProp(
    ctx): void;
 ```
 
-Defined in: Object.ts:124
+Defined in: Object.ts:122
 
 ## Parameters
 

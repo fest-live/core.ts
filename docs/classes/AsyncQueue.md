@@ -1,4 +1,4 @@
-[**@fest-lib/core v0.1.19**](../README.md)
+[**@fest-lib/core v0.1.20**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Class: AsyncQueue
 
-Defined in: PromiseUtils.ts:47
+Defined in: PromiseUtils.ts:65
 
 Queue async operations and process them sequentially
 
@@ -32,7 +32,7 @@ new AsyncQueue(): AsyncQueue;
 get isProcessing(): boolean;
 ```
 
-Defined in: PromiseUtils.ts:83
+Defined in: PromiseUtils.ts:101
 
 ##### Returns
 
@@ -48,7 +48,7 @@ Defined in: PromiseUtils.ts:83
 get length(): number;
 ```
 
-Defined in: PromiseUtils.ts:79
+Defined in: PromiseUtils.ts:97
 
 ##### Returns
 
@@ -62,7 +62,7 @@ Defined in: PromiseUtils.ts:79
 add<T>(operation): Promise<T>;
 ```
 
-Defined in: PromiseUtils.ts:51
+Defined in: PromiseUtils.ts:69
 
 #### Type Parameters
 

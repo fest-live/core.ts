@@ -1,4 +1,4 @@
-[**@fest-lib/core v0.1.19**](../README.md)
+[**@fest-lib/core v0.1.20**](../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 function concurrentLimit<T>(operations, limit): Promise<T[]>;
 ```
 
-Defined in: PromiseUtils.ts:129
+Defined in: PromiseUtils.ts:159
 
 Execute operations concurrently with a limit
 
