@@ -1,4 +1,4 @@
-[**@fest-lib/core v0.1.21**](../README.md)
+[**@fest-lib/core v0.1.22**](../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 function isMountedFsRequest(value): value is MountedFsRequest;
 ```
 
-Defined in: MountedFs.ts:67
+Defined in: MountedFs.ts:70
 
 ## Parameters
 

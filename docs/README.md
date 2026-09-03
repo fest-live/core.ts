@@ -1,8 +1,8 @@
-**@fest-lib/core v0.1.21**
+**@fest-lib/core v0.1.22**
 
 ***
 
-# @fest-lib/core v0.1.21
+# @fest-lib/core v0.1.22
 
 ## Classes
 

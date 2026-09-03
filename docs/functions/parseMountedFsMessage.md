@@ -1,4 +1,4 @@
-[**@fest-lib/core v0.1.21**](../README.md)
+[**@fest-lib/core v0.1.22**](../README.md)
 
 ***
 
@@ -13,7 +13,7 @@ function parseMountedFsMessage(raw):
   | null;
 ```
 
-Defined in: MountedFs.ts:80
+Defined in: MountedFs.ts:83
 
 ## Parameters
 

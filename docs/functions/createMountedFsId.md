@@ -1,4 +1,4 @@
-[**@fest-lib/core v0.1.21**](../README.md)
+[**@fest-lib/core v0.1.22**](../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 function createMountedFsId(): string;
 ```
 
-Defined in: MountedFs.ts:58
+Defined in: MountedFs.ts:61
 
 ## Returns
 

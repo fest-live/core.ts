@@ -1,4 +1,4 @@
-[**@fest-lib/core v0.1.21**](../README.md)
+[**@fest-lib/core v0.1.22**](../README.md)
 
 ***
 
@@ -106,6 +106,16 @@ Defined in: MountedFs.ts:50
 
 ***
 
+### socketio?
+
+```ts
+optional socketio?: boolean;
+```
+
+Defined in: MountedFs.ts:58
+
+***
+
 ### stat?
 
 ```ts
@@ -141,3 +151,15 @@ t: "fs-result";
 ```
 
 Defined in: MountedFs.ts:46
+
+***
+
+### ws?
+
+```ts
+optional ws?: boolean;
+```
+
+Defined in: MountedFs.ts:57
+
+Host attached `/ssre/fs/ws`. Client must not dial WS unless this is true.
