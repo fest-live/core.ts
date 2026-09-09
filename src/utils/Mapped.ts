@@ -42,22 +42,25 @@ export const cachedPerFileName = new Map<string, any>();
 
 //
 export const GET_OR_CACHE = async (file: File | Blob | Promise<File | Blob> | null) => {
-    try { file = await file; } catch (e) { file = null; console.warn(e); }; if (file == null) return null;
-    if (cachedPerFile.has(file)) return cachedPerFile.get(file);
-    if (file?.type != "application/json") { return cachedPerFile.get(file); };
+    let blob: File | Blob | null = null;
+    try { blob = await file; } catch (e) { blob = null; console.warn(e); }
+    if (blob == null) return null;
+    if (cachedPerFile.has(blob)) return cachedPerFile.get(blob);
+    if (blob.type != "application/json") { return cachedPerFile.get(blob); }
 
-    //
-    const raw = await file?.text?.()?.catch?.(console.warn.bind(console)) || "{}";
+    const raw = await blob.text?.()?.catch?.(console.warn.bind(console)) || "{}";
     let obj = {} as any; try { obj = JSON.parse(raw) as any; } catch (_) { try { obj = JSON.parse(raw) as any; } catch (e) { console.warn(e); } }
-    if (file) { cachedPerFile.set(file, obj); }
+    cachedPerFile.set(blob, obj);
     return obj;
 };
 
 // if any other argument isn't working, such as File object (for example, while exclusion)
 export const GET_OR_CACHE_BY_NAME = async (fileName: string, file?: File | Blob | Promise<File | Blob> | null) => {
-    try { file = await file; } catch (e) { file = null; console.warn(e); }; if (fileName == null) return null;
+    let blob: File | Blob | null = null;
+    try { blob = await file; } catch (e) { blob = null; console.warn(e); }
+    if (fileName == null) return null;
     if (cachedPerFileName.has(fileName)) return cachedPerFileName.get(fileName);
-    const obj = file != null ? await GET_OR_CACHE(file) : cachedPerFileName?.get(fileName);
+    const obj = blob != null ? await GET_OR_CACHE(blob) : cachedPerFileName?.get(fileName);
     if (fileName) { cachedPerFileName.set(fileName, obj); }
     return obj;
 };

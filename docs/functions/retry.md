@@ -1,4 +1,4 @@
-[**@fest-lib/core v0.1.27**](../README.md)
+[**@fest-lib/core v0.1.29**](../README.md)
 
 ***
 
@@ -11,7 +11,8 @@ function retry<T>(
    operation, 
    maxRetries?, 
    initialDelay?, 
-backoffMultiplier?): Promise<T>;
+   backoffMultiplier?
+): Promise<T>;
 ```
 
 Defined in: PromiseUtils.ts:132

@@ -1,4 +1,4 @@
-[**@fest-lib/core v0.1.27**](../README.md)
+[**@fest-lib/core v0.1.29**](../README.md)
 
 ***
 
@@ -10,7 +10,8 @@
 function getOrInsertComputed<K, V>(
    map, 
    key, 
-   callbackFunction?): V;
+   callbackFunction?
+): V;
 ```
 
 Defined in: Upsert.ts:34

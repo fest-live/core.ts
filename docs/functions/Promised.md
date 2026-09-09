@@ -1,4 +1,4 @@
-[**@fest-lib/core v0.1.27**](../README.md)
+[**@fest-lib/core v0.1.29**](../README.md)
 
 ***
 
@@ -10,7 +10,8 @@
 function Promised<T>(
    promise, 
    resolve?, 
-   reject?): any;
+   reject?
+): any;
 ```
 
 Defined in: Promised.ts:191

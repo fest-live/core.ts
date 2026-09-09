@@ -1,4 +1,4 @@
-[**@fest-lib/core v0.1.27**](../README.md)
+[**@fest-lib/core v0.1.29**](../README.md)
 
 ***
 
@@ -12,7 +12,8 @@ function objectAssign(
    value, 
    name?, 
    removeNotExists?, 
-   mergeKey?): any;
+   mergeKey?
+): any;
 ```
 
 Defined in: Object.ts:43

@@ -1,4 +1,4 @@
-[**@fest-lib/core v0.1.27**](../README.md)
+[**@fest-lib/core v0.1.29**](../README.md)
 
 ***
 
@@ -68,7 +68,8 @@ Get health status of a channel
 registerHealthCheck(
    channelName, 
    healthCheck, 
-   intervalMs?): void;
+   intervalMs?
+): void;
 ```
 
 Defined in: ChannelUtils.ts:147

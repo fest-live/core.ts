@@ -91,10 +91,10 @@ export const redirectCell = ($preCell: [number, number], gridArgs: GridArgsType)
     const layout = normalizeGridLayout(gridArgs?.layout ?? [4, 8]);
     const normalizedArgs: GridArgsType = { ...gridArgs, layout };
     const icons = gridItemsAsArray(normalizedArgs?.items);
-    const item = normalizedArgs?.item || {};
+    const item = normalizedArgs?.item;
     const checkBusy = (cell): boolean => {
         return icons
-            .filter((e: GridItemType) => !(e == item || e?.id == item?.id))
+            .filter((e: GridItemType) => !(e == item || (item != null && e?.id == item.id)))
             .some((one) => ((one?.cell?.[0] || 0) == (cell[0] || 0) && (one?.cell?.[1] || 0) == (cell[1] || 0)));
     };
 

@@ -1,4 +1,4 @@
-[**@fest-lib/core v0.1.27**](../README.md)
+[**@fest-lib/core v0.1.29**](../README.md)
 
 ***
 
@@ -12,7 +12,8 @@
 function withTimeout<D>(
    promises, 
    timeoutMs, 
-timeoutMessage?): Promise<{ [K in string | number | symbol]: Awaited<D[K]> }>;
+   timeoutMessage?
+): Promise<{ [K in string | number | symbol]: Awaited<D[K]> }>;
 ```
 
 Defined in: PromiseUtils.ts:110
@@ -50,7 +51,8 @@ A plain object of thenables is awaited via `Promise.allKeyed`.
 function withTimeout<T>(
    promise, 
    timeoutMs, 
-timeoutMessage?): Promise<T>;
+   timeoutMessage?
+): Promise<T>;
 ```
 
 Defined in: PromiseUtils.ts:115

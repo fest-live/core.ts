@@ -1,4 +1,4 @@
-[**@fest-lib/core v0.1.27**](../README.md)
+[**@fest-lib/core v0.1.29**](../README.md)
 
 ***
 
@@ -11,7 +11,8 @@ function checkRemainsTime(
    beginTime, 
    endTime, 
    currentTime, 
-   maxDays?): boolean;
+   maxDays?
+): boolean;
 ```
 
 Defined in: Time.ts:190

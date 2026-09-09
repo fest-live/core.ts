@@ -1,4 +1,4 @@
-[**@fest-lib/core v0.1.27**](../README.md)
+[**@fest-lib/core v0.1.29**](../README.md)
 
 ***
 
@@ -10,7 +10,8 @@
 function makeOrientInset(
    $orientPx, 
    gridArgs, 
-   orient?): [number, number];
+   orient?
+): [number, number];
 ```
 
 Defined in: GridItemUtils.ts:126

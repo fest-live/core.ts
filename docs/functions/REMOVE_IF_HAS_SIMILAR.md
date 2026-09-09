@@ -1,4 +1,4 @@
-[**@fest-lib/core v0.1.27**](../README.md)
+[**@fest-lib/core v0.1.29**](../README.md)
 
 ***
 
@@ -11,7 +11,8 @@ function REMOVE_IF_HAS_SIMILAR(
    array, 
    old, 
    idx?, 
-   srcObj?): void;
+   srcObj?
+): void;
 ```
 
 Defined in: Mapped.ts:16

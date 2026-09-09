@@ -1,4 +1,4 @@
-[**@fest-lib/core v0.1.27**](../README.md)
+[**@fest-lib/core v0.1.29**](../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 function mergeByExists<T>(dataRef, refs): T[];
 ```
 
-Defined in: Mapped.ts:66
+Defined in: Mapped.ts:69
 
 ## Type Parameters
 

@@ -1,4 +1,4 @@
-[**@fest-lib/core v0.1.27**](../README.md)
+[**@fest-lib/core v0.1.29**](../README.md)
 
 ***
 
@@ -12,7 +12,8 @@ function resolveLocalPointToGridCell(
    size, 
    layout, 
    orient, 
-   options?): [number, number];
+   options?
+): [number, number];
 ```
 
 Defined in: GridItemUtils.ts:35

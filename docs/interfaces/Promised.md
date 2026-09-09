@@ -1,4 +1,4 @@
-[**@fest-lib/core v0.1.27**](../README.md)
+[**@fest-lib/core v0.1.29**](../README.md)
 
 ***
 
@@ -43,7 +43,8 @@ Optional reject callback
 allKeyed<D>(
    promises, 
    resolve?, 
-   reject?): any;
+   reject?
+): any;
 ```
 
 Defined in: Promised.ts:179
@@ -80,7 +81,8 @@ Defined in: Promised.ts:179
 allSettledKeyed<D>(
    promises, 
    resolve?, 
-   reject?): any;
+   reject?
+): any;
 ```
 
 Defined in: Promised.ts:184

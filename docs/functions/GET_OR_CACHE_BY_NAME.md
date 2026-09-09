@@ -1,4 +1,4 @@
-[**@fest-lib/core v0.1.27**](../README.md)
+[**@fest-lib/core v0.1.29**](../README.md)
 
 ***
 
@@ -10,7 +10,7 @@
 function GET_OR_CACHE_BY_NAME(fileName, file?): Promise<any>;
 ```
 
-Defined in: Mapped.ts:57
+Defined in: Mapped.ts:58
 
 ## Parameters
 

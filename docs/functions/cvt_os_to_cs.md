@@ -1,4 +1,4 @@
-[**@fest-lib/core v0.1.27**](../README.md)
+[**@fest-lib/core v0.1.29**](../README.md)
 
 ***
 
@@ -10,7 +10,8 @@
 function cvt_os_to_cs(
    pos_in_os, 
    size_in_cs, 
-   or_i?): [number, number];
+   or_i?
+): [number, number];
 ```
 
 Defined in: Convert.ts:26
