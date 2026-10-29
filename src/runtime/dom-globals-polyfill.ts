@@ -8,7 +8,7 @@
  */
 export function installDomConstructorPolyfills(): void {
     const g = globalThis as unknown as Record<string, unknown>;
-    if (typeof g.HTMLElement === "function") return;
+    if (g?.HTMLElement == null || typeof g?.HTMLElement === "function") return;
 
     const stub = class {};
     const ensure = (name: string) => {
